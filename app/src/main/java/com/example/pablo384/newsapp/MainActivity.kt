@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity(), ArticleAdapter.OnItemClickListener, Ar
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
                 // Toast like print
-                toast("SearchOnQueryTextSubmit: " + query)
+//                toast("SearchOnQueryTextSubmit: " + query)
                 httpRequest(search = query)
                 if (!searchView.isIconified) {
                     searchView.isIconified = true
