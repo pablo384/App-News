@@ -29,7 +29,9 @@ class ArticleAdapter(val list:ArrayList<Article>, val itemClick:OnItemClickListe
             textViewAuthor.text= article.author
             textViewDescription.text= article.description
             buttonViewNews.setOnClickListener { onButtonClickListener.onButtonClick(article,position) }
+            buttonShareNews.setOnClickListener { onButtonClickListener.onButtonShareClick(article,position) }
             setOnClickListener { onItemClickListener.onItemClick(article,position) }
+
             Picasso.with(context).load(article.urlToImage)
                     .into(imageViewimage)
         }
@@ -40,6 +42,7 @@ class ArticleAdapter(val list:ArrayList<Article>, val itemClick:OnItemClickListe
     }
     interface OnButtonClickListener{
         fun onButtonClick(article:Article, position:Int)
+        fun onButtonShareClick(article:Article, position:Int)
     }
 
 
