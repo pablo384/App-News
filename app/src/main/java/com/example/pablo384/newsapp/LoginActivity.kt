@@ -15,13 +15,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun validacion() {
-//        if (textuser.text.toString() == "admin" && textpassword.text.toString() == "1234"){
+        if (textuser.text.toString() == "admin" && textpassword.text.toString() == "1234"){
             val intent = Intent(this,MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK
                     and  Intent.FLAG_ACTIVITY_CLEAR_TOP
                     and Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
-//        }
+        }
     }
 }
